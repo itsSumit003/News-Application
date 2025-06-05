@@ -1,7 +1,9 @@
 # News-Application
+
 A modern News App that fetches and displays the latest headlines using the NewsAPI. Users can search for specific topics and view news from various categories with a clean UI.
 
-🚀 Features
+🚀 Features:
+
 🔍 Search for news by keyword
 
 🗂️ Filter news by categories like Finance
@@ -11,7 +13,8 @@ Politics, Sports, etc.
 
 🌙 Light/Dark mode (optional)
 
-🛠️ Tech Stack
+🛠️ Tech Stack:
+
 Frontend: HTML, CSS, JavaScript
 
 API: NewsAPI.org
