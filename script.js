@@ -1,5 +1,5 @@
 const API_KEY = "1a8a8bd938564c18b7ed57eb2b3c08c1";
-const url = "https://newsapi.org/v2/top-headlines?q=";
+const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchNews("India"));
 
@@ -7,28 +7,12 @@ function reload() {
     window.location.reload();
 }
 
-// async function fetchNews(query) {
-//     const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-//     const data = await res.json();
-//     bindData(data.articles);
-
-// }
 async function fetchNews(query) {
-    try {
-        const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-        const data = await res.json();
+    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+    const data = await res.json();
+    bindData(data.articles);
 
-        if (!data.articles) {
-            console.error("No articles found or API limit reached:", data);
-            return;
-        }
-
-        bindData(data.articles);
-    } catch (error) {
-        console.error("Fetch failed:", error);
-    }
 }
-
 
 function bindData(articles) {
     const cardsContainer = document.getElementById("cards-container");
